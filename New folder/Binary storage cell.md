@@ -364,9 +364,7 @@ There are **two main methods**:
 
 # Understanding Master-Slave D Flip-Flop
 
-
-
-![image-20250516153603760](https://raw.githubusercontent.com/jagmeet29/New-folder--2-/main/2025/05/upgit_20250516_1747389965.png)
+![Screenshot 2025-05-16 153600](https://raw.githubusercontent.com/jagmeet29/New-folder--2-/main/2025/05/upgit_20250516_1747396796.png)
 
 ## How It Works
 
@@ -431,9 +429,7 @@ This master-slave arrangement is fundamental in digital circuits because it prev
 
 # Edge-Triggered D Flip-Flop with SR Latches
 
-
-
-![image-20250516154311898](https://raw.githubusercontent.com/jagmeet29/New-folder--2-/main/2025/05/upgit_20250516_1747390392.png)
+![Screenshot 2025-05-16 154257](https://raw.githubusercontent.com/jagmeet29/New-folder--2-/main/2025/05/upgit_20250516_1747396810.png)
 
 ## Basic Structure
 
