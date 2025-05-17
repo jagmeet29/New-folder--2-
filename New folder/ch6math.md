@@ -338,7 +338,7 @@ Remainder can not be negative
 
 2. $r=a\ (mod \ b)$
 
-> $ a \equiv r\ (mod\ b) $
+> $a \equiv r\ (mod\ b)$
 
 ### Example
 
@@ -366,9 +366,10 @@ $$
 
 # Modular Arithmetic
 
-> If $a \ \& \ b$ are integers and $m$ is a positive integer ; $a$ is congruent to $b$ modulo $m$ ;
+> If $a \ \ b$ are integers and $m$ is a positive integer ; $a$ is congruent to $b$ modulo $m$ ;
 >
-> If $m$ divides $(a-b)$ 
+> If $m$ divides $(a-b)$
+> 
 > $$
 > a \equiv b\ (mod \ m)
 > $$
@@ -377,10 +378,12 @@ $$
 :: :question:
 
 Find out if these are congruent 
+
 $$
 17 \equiv 5\ (mod \ 6)\\
 24 \equiv 14 (mod \ 6)
 $$
+
 :: :
 
 :: :ok_hand:
