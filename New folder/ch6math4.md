@@ -21,28 +21,28 @@
 ### **2. How to Calculate GCD and LCM**  
 #### **Using Prime Factorization**  
 - **Step 1:** Break both numbers into their **prime factors**.  
-    - **24** = \(2^3 \times 3\)  
-    - **36** = \(2^2 \times 3^2\)  
+    - **24** = $2^3 \times 3$  
+    - **36** = $2^2 \times 3^2$  
 
 - **Step 2:**  
     - **GCD:** Take the **lowest power** of each **common prime factor**.  
-        - Common primes: \(2\) and \(3\).  
-        - \(2^{\min(3,2)} \times 3^{\min(1,2)} = 2^2 \times 3^1 = 4 \times 3 = 12\).  
+        - Common primes: $2$ and $3$.  
+        - $2^{\min(3,2)} \times 3^{\min(1,2)} = 2^2 \times 3^1 = 4 \times 3 = 12$  
     - **LCM:** Take the **highest power** of each **prime factor** (from both numbers).  
-        - \(2^{\max(3,2)} \times 3^{\max(1,2)} = 2^3 \times 3^2 = 8 \times 9 = 72\).  
+        - $2^{\max(3,2)} \times 3^{\max(1,2)} = 2^3 \times 3^2 = 8 \times 9 = 72$  
 
 ---
 
-### **3. Key Identity: \(a \times b = \text{LCM}(a, b) \times \text{GCD}(a, b)\)**  
+### **3. Key Identity: $a \times b = \text{LCM}(a, b) \times \text{GCD}(a, b)$**  
 This identity connects the **product of two numbers** to their **LCM and GCD**.  
 
 #### **Example:**  
-For \(a = 24\) and \(b = 36\):  
-- **Product:** \(24 \times 36 = 864\)  
+For $a = 24$ and $b = 36$:  
+- **Product:** $24 \times 36 = 864$  
 - **LCM:** 72  
 - **GCD:** 12  
-- **LCM × GCD:** \(72 \times 12 = 864\)  
-- **Result:** \(24 \times 36 = 72 \times 12\) → **Identity holds!**  
+- **LCM × GCD:** $72 \times 12 = 864$  
+- **Result:** $24 \times 36 = 72 \times 12$ → **Identity holds!**  
 
 #### **Why This Works?**  
 - The **GCD** captures the **shared factors** (common to both numbers).  
@@ -60,10 +60,10 @@ For \(a = 24\) and \(b = 36\):
 
 ### **5. Connection to Co-Prime Numbers**  
 - If two numbers are **co-prime**, their **GCD = 1**, and their **LCM = product of the numbers**.  
-    Example: \(a = 8\) and \(b = 15\) (co-prime).  
+    Example: $a = 8$ and $b = 15$ (co-prime).  
     - GCD = 1  
-    - LCM = \(8 \times 15 = 120\)  
-    - Identity: \(8 \times 15 = 120 \times 1\) → True.  
+    - LCM = $8 \times 15 = 120$  
+    - Identity: $8 \times 15 = 120 \times 1$ → True.  
 
 #### **Illustrative Example of LCM and GCD**
 Let's use 4 and 6:
@@ -75,5 +75,5 @@ Let's use 4 and 6:
 ### **Summary**  
 - **GCD** and **LCM** are fundamental in number theory.
 - The GCD reveals the shared factors between numbers, while the LCM represents their smallest common multiple.
-- The identity \(a \times b = \text{LCM}(a, b) \times \text{GCD}(a, b)\) is a powerful tool for calculations.  
+- The identity $a \times b = \text{LCM}(a, b) \times \text{GCD}(a, b)$ is a powerful tool for calculations.  
 - Understanding these concepts helps simplify problems in mathematics, engineering, and computer science.
