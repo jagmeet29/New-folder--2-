@@ -120,7 +120,7 @@ $$
 
 ## Solution using the Chinese Remainder Theorem:
 
-### Step 1: Identify the coefficients and moduli [1]
+### Step 1: Identify the coefficients and moduli 
 
 $$
 \begin{aligned}
@@ -131,7 +131,7 @@ a_4 &= 4, & m_4 &= 11
 \end{aligned}
 $$
 
-### Step 2: Calculate the product of all moduli [1]
+### Step 2: Calculate the product of all moduli 
 
 $$
 \begin{aligned}
@@ -141,7 +141,7 @@ M &= m_1 \times m_2 \times m_3 \times m_4 \\
 \end{aligned}
 $$
 
-### Step 3: Calculate $M_i = \frac{M}{m_i}$ for each modulus [2]
+### Step 3: Calculate $M_i = \frac{M}{m_i}$ for each modulus 
 
 $$
 \begin{aligned}
@@ -152,7 +152,7 @@ M_4 &= \frac{M}{m_4} = \frac{330}{11} = 30
 \end{aligned}
 $$
 
-### Step 4: Find the multiplicative inverses [2][3]
+### Step 4: Find the multiplicative inverses 
 
 We need to find $y_i$ such that $M_i \cdot y_i \equiv 1 \pmod{m_i}$ for each $i$.
 
@@ -202,7 +202,7 @@ $$
 Testing values:
 - $y_4 = 7$ works because $8 \cdot 7 = 56 \equiv 1 \pmod{11}$ ✓
 
-### Step 5: Calculate the solution [3]
+### Step 5: Calculate the solution 
 
 $$
 \begin{aligned}
@@ -321,118 +321,3 @@ $$x \equiv 23 \pmod{105}$$
 Therefore, the solution to the system of congruences is $x \equiv 23 \pmod{105}$.
 
 :: :
-
----
-
-# Division Algorithm 
-
-$$
-a = b\ q+r
-$$
-
-Remainder can not be negative
-
-## Deferent Notation 
-
-1. $q=a\ div \ b$
-
-2. $r=a\ (mod \ b)$
-
-> $a \equiv r\ (mod\ b)$
-
-### Example
-
-$101 = 11 \times 9 +2$
-
-1. $9=101 \ div \ 11 $
-2. $2=101 \ (mod \ 11)$
-
-:: :question:
-
-$$
-13 \ (mod \ 3) =\ ?
-$$
-
-
-:: :
-
-:: :ok_hand:
-
-$$
-r=1
-$$
-
-:: :
-
-# Modular Arithmetic
-
-> If $a \ \ b$ are integers and $m$ is a positive integer ; $a$ is congruent to $b$ modulo $m$ ;
->
-> If $m$ divides $(a-b)$
-> 
-> $$
-> a \equiv b\ (mod \ m)
-> $$
-> 
-
-:: :question:
-
-Find out if these are congruent 
-
-$$
-17 \equiv 5\ (mod \ 6)\\
-24 \equiv 14 (mod \ 6)
-$$
-
-:: :
-
-:: :ok_hand:
-
-1. yes
-2. No
-
-:: :
-
-# Euclidean Algorithm
-
-> Divident = Divisor $\times$ Quotient + Remainder
-
-:: :question:
-
-Find the GCD of 91 and 287 using Euclidean Algorithm
-:: :
-:: :ok_hand:
-
-
-![image-20250516122832023](https://raw.githubusercontent.com/jagmeet29/New-folder--2-/main/2025/05/upgit_20250516_1747378713.png)
-
-
-$$
-\begin{aligned}
-287 &= 91 \times 3 + 14 \\
-91 &= 14 \times 6 + 7 \\
-14 &= 7 \times 2 + 0
-\end{aligned}
-$$
-
-The GCD is 7.
-
-:: :
-
-:: :question:
-Find the GCD of 44 and 662 using Euclidean Algorithm
-:: :
-
-:: :ok_hand:
-
-$$
-\begin{aligned}
-662 &= 44 \times 15 + 2 \\
-44 &= 2 \times 22 + 0
-\end{aligned}
-$$
-
-The GCD is 2.
-:: :
-
-
