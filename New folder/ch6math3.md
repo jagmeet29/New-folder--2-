@@ -8,10 +8,10 @@ Cryptanalysis is the science of recovering plaintext from ciphertext without pri
 
 The shift cipher (also known as the Caesar cipher) is a simple substitution cipher where each letter in the plaintext is replaced by another letter a fixed number of positions away in the alphabet. For example, with a shift of 3, 'A' becomes 'D', 'B' becomes 'E', and so on. Mathematically, this can be expressed as:
 
-- Encryption: `E(x) = (x + k) mod 26`
-- Decryption: `D(x) = (x - k) mod 26`
+- Encryption: $E(x) = (x + k) \bmod 26$
+- Decryption: $D(x) = (x - k) \bmod 26$
 
-Where x represents the numerical value of a letter (A=0, B=1, etc.) and k is the shift value.
+Where $x$ represents the numerical value of a letter (A=0, B=1, etc.) and $k$ is the shift value.
 
 ### Breaking Shift Ciphers
 
@@ -53,7 +53,7 @@ Following frequency analysis:
 2. Hypothesizing that 'K' corresponds to 'E', we can calculate the shift value:
     - 'E' has a numerical value of 4 (where A=0)
     - 'K' has a numerical value of 10
-    - Therefore, the shift k = (10 - 4) mod 26 = 6
+    - Therefore, the shift $k = (10 - 4) \bmod 26 = 6$
 
 3. Applying a reverse shift of 6 to the entire ciphertext produces:
     "THE EARLY BIRD GETS THE WORM"
@@ -68,43 +68,43 @@ While the shift cipher uses a simple constant shift, the affine cipher adds comp
 
 ### The Formula
 
-The affine cipher uses the formula: `c = (ap + b) mod 26`, where:
+The affine cipher uses the formula: $c = (ap + b) \bmod 26$, where:
 
-- `p`: Numerical value of the plaintext letter (A=0, B=1, ..., Z=25)
-- `a`: Multiplicative key (must be coprime with 26)
-- `b`: Additive key (like a shift)
-- `c`: Numerical value of the resulting ciphertext letter
+- $p$: Numerical value of the plaintext letter (A=0, B=1, ..., Z=25)
+- $a$: Multiplicative key (must be coprime with 26)
+- $b$: Additive key (like a shift)
+- $c$: Numerical value of the resulting ciphertext letter
 
 ### Key Requirements
 
-The requirement that `a` be coprime with 26 is essential for decryption. It guarantees there's a unique "inverse" value for `a` that allows us to reverse the process and recover the original letter.
+The requirement that $a$ be coprime with 26 is essential for decryption. It guarantees there's a unique "inverse" value for $a$ that allows us to reverse the process and recover the original letter.
 
 ### Decryption Process
 
 To decrypt, the formula is:
-`p = a⁻¹ * (c - b) mod 26`
+$$p = a^{-1} \cdot (c - b) \bmod 26$$
 
-Where `a⁻¹` is the modular multiplicative inverse of `a` modulo 26 (a number such that `(a * a⁻¹) mod 26 = 1`).
+Where $a^{-1}$ is the modular multiplicative inverse of $a$ modulo 26 (a number such that $(a \cdot a^{-1}) \bmod 26 = 1$).
 
 ### Example
 
-**Key:** a = 5, b = 8  
+**Key:** $a = 5$, $b = 8$  
 **Plaintext:** HELLO  
 **Encryption:**
-- H (7): (5 * 7 + 8) mod 26 = 43 mod 26 = 17 (R)
-- E (4): (5 * 4 + 8) mod 26 = 28 mod 26 = 2 (B)
-- L (11): (5 * 11 + 8) mod 26 = 63 mod 26 = 11 (L)
-- L (11): (5 * 11 + 8) mod 26 = 63 mod 26 = 11 (L)
-- O (14): (5 * 14 + 8) mod 26 = 78 mod 26 = 0 (A)
+- H (7): $(5 \cdot 7 + 8) \bmod 26 = 43 \bmod 26 = 17$ (R)
+- E (4): $(5 \cdot 4 + 8) \bmod 26 = 28 \bmod 26 = 2$ (B)
+- L (11): $(5 \cdot 11 + 8) \bmod 26 = 63 \bmod 26 = 11$ (L)
+- L (11): $(5 \cdot 11 + 8) \bmod 26 = 63 \bmod 26 = 11$ (L)
+- O (14): $(5 \cdot 14 + 8) \bmod 26 = 78 \bmod 26 = 0$ (A)
 
 **Ciphertext:** RBLLA
 
 **Decryption:**
-- R (17): 21 * (17-8) mod 26 = 21 * 9 mod 26 = 189 mod 26 = 7 (H)
-- B (2): 21 * (2-8) mod 26 = 21 * (-6) mod 26 = -126 mod 26 = 4 (E)
-- L (11): 21 * (11-8) mod 26 = 21 * 3 mod 26 = 63 mod 26 = 11 (L)
-- L (11): 21 * (11-8) mod 26 = 21 * 3 mod 26 = 63 mod 26 = 11 (L)
-- A (0): 21 * (0-8) mod 26 = 21 * (-8) mod 26 = -168 mod 26 = 14 (O)
+- R (17): $21 \cdot (17-8) \bmod 26 = 21 \cdot 9 \bmod 26 = 189 \bmod 26 = 7$ (H)
+- B (2): $21 \cdot (2-8) \bmod 26 = 21 \cdot (-6) \bmod 26 = -126 \bmod 26 = 4$ (E)
+- L (11): $21 \cdot (11-8) \bmod 26 = 21 \cdot 3 \bmod 26 = 63 \bmod 26 = 11$ (L)
+- L (11): $21 \cdot (11-8) \bmod 26 = 21 \cdot 3 \bmod 26 = 63 \bmod 26 = 11$ (L)
+- A (0): $21 \cdot (0-8) \bmod 26 = 21 \cdot (-8) \bmod 26 = -168 \bmod 26 = 14$ (O)
 
 ### Security Comparison
 
